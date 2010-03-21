@@ -1,0 +1,156 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>ExtJS On Side Title Header for Panels</title>
+<!-- Include extjs for this test -->
+<link rel="stylesheet" type="text/css" href="../ext3/resources/css/ext-all.css" />
+<script type="text/javascript" src="../ext3/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../ext3/ext-all-debug.js"></script>
+
+<!-- Include the override files -->
+<link rel="stylesheet" type="text/css" href="css/ext-onside-titles.css" />
+<script type="text/javascript" src="js/ext-onside-panel-title-override.js"></script>
+
+<script type="text/javascript">
+    Ext.onReady(function(){
+        new Ext.Panel({
+		title               : 'Example 1 Frame with tools',
+                headerDir           : 'left',
+		preventBodyReset    : true,
+                closable            : true,
+                padding             : 10,
+                tools               : [{
+                  id        : 'refresh',
+                  scope     : this,
+                  handler   : function(){
+                      this.showEdit()
+                  }
+                },{
+                  id        : 'close',
+                  handler   : function(e, target, panel){
+                    panel.ownerCt.remove(panel, true);
+                  }
+                }],
+                collapsible         : true,
+                frame               : true,
+                border              : false,
+		renderTo            : 'example1',
+		width               : 600,
+		html                : 'This is a panel with frame and variuos tools + no height<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;'
+	});
+        new Ext.Panel({
+		title               : 'Example 2: Frame with toolbar',
+                headerDir           : 'left',
+		preventBodyReset    : true,
+                closable            : true,
+                padding             : 10,
+                tbar                : [
+                    {
+                        text    : 'This is a button on the toolbar'
+                    }
+                ],
+                collapsible         : true,
+                frame               : true,
+                border              : false,
+		renderTo            : 'example2',
+		width               : 600,
+                height              : 400,
+		html                : 'This is a panel with frame and toolbar, with collapse tool + height setted at 400'
+	});
+        new Ext.Panel({
+		title               : 'Example 3 : No Frame without border',
+                headerDir           : 'left',
+		preventBodyReset    : true,
+                closable            : true,
+                bbar                : [
+                    {
+                        text    : 'This is a button on the toolbar'
+                    }
+                ],
+                padding             : 10,
+                tools               : [{
+                  id        : 'refresh',
+                  scope     : this,
+                  handler   : function(){
+                      this.showEdit()
+                  }
+                },{
+                  id        : 'close',
+                  handler   : function(e, target, panel){
+                    panel.ownerCt.remove(panel, true);
+                  }
+                }],
+                collapsible         : true,
+                border              : false,
+		renderTo            : 'example3',
+		width               : 400,
+		html                : 'This is a panel with no frame and variuos tools + no height<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;'
+	});
+        new Ext.Panel({
+		title               : 'Example 4: No Frame with border and toolbar',
+                headerDir           : 'left',
+		preventBodyReset    : true,
+                closable            : true,
+                padding             : 10,
+                tbar                : [
+                    {
+                        text    : 'This is a button on the toolbar'
+                    }
+                ],
+                border              : true,
+		renderTo            : 'example4',
+		width               : 600,
+                height              : 365,
+		html                : 'This is a panel without frame and toolbar + height setted at 365'
+	});
+        new Ext.Panel({
+		title               : 'Example 5: No Frame with border and 2 toolbars',
+                headerDir           : 'left',
+		preventBodyReset    : true,
+                closable            : true,
+                tools               : [{
+                  id        : 'refresh',
+                  scope     : this,
+                  handler   : function(){
+                      this.showEdit()
+                  }
+                },{
+                  id        : 'close',
+                  handler   : function(e, target, panel){
+                    panel.ownerCt.remove(panel, true);
+                  }
+                }],
+                padding             : 10,
+                tbar                : [
+                    {
+                        text    : 'This is a button on the toolbar'
+                    }
+                ],
+                bbar                : [
+                    {
+                        text    : 'This is a button on the toolbar'
+                    }
+                ],
+                border              : true,
+		renderTo            : 'example5',
+		width               : 650,
+                height              : 350,
+		html                : 'This is a panel without frame and 2 toolbars + height setted at 350'
+	});
+    })
+</script>
+
+</head>
+<body>
+    <div id="example1" style="padding:10px;clear:both;">
+    </div>
+    <div id="example2" style="padding:10px;clear:both;">
+    </div>
+    <div id="example3" style="padding:10px;clear:both;">
+    </div>
+    <div id="example4" style="padding:10px;clear:both;">
+    </div>
+    <div id="example5" style="padding:10px;clear:both;">
+    </div>
+</body>
+</html>

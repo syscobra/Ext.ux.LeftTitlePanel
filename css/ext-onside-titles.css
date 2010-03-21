@@ -1,0 +1,155 @@
+/***
+ *  Document   : ext-onside-titles
+ *  Created on : 21/03/2010, 03:35:51 AM
+ *  Author     : Javier Rincon (syscobra)
+ *  Description:
+ *      StyleSheet for css classes needed for the ExtJS On Side Titles Panel Override
+ */
+
+/***
+ * x-left-panel : Main Left Header Titles for ExtJS Panels
+ */
+ .x-left-panel {
+     float:left;
+}
+/* Header div */
+.x-left-panel .x-panel-header {
+    background-image: url(images/header-middle-normal.png);
+    background-repeat: repeat;
+    float:left;
+    border:0px;
+    padding:0px;
+    border:1px solid #99BBE8;
+}
+.x-left-panel .x-panel-header-noborder {
+    border-style:solid;
+    border-width:0 1px 0 0 !important;
+}
+/* Header span */
+.x-left-panel .x-panel-header-text{
+    margin-left:3px;
+    display: block;
+    overflow:hidden;
+}
+/* Header span div for the rotation*/
+.x-left-panel .x-panel-header-text div{
+    -moz-transform: rotate(270deg);
+    -moz-transform-origin: top 10px;
+    -webkit-transform: rotate(270deg);
+    -webkit-transform-origin: 50% 50%;
+    -o-transform: rotate(270deg);
+    -o-transform-origin:  top 10px;
+    filter: flipH() flipV();
+    writing-mode: tb-rl;
+    white-space:pre;
+}
+/* Header tools */
+.x-left-panel .x-tool{
+    -moz-transform: rotate(270deg);
+    -moz-transform-origin: top 10px;
+    -webkit-transform: rotate(270deg);
+    -webkit-transform-origin: bottom left;
+    -o-transform: rotate(270deg);
+    -o-transform-origin:  bottom left;
+    filter: flipH() flipV();
+    writing-mode: tb-rl;
+    float:none;
+    margin-top:3px;
+    margin-bottom:3px;
+}
+/* Fix for Webkit */
+.ext-webkit .x-left-panel .x-tool {
+    margin-left:18px;
+}
+/* Body Wrap */
+.x-left-panel .x-panel-bwrap {
+    float:right;
+}
+/* Body */
+.x-left-panel .x-panel-body {
+    border:0px;
+    border:1px solid #99BBE8;
+    border-left-width:0px;
+}
+.x-left-panel .x-panel-body-noborder {
+    border-width:0px;
+}
+/* Panel with Frame Classes */
+/* a wrap for the title header */
+.x-left-panel .headerwrap{
+    float:left;
+}
+/* Override the normal Panels CSS */
+.x-left-panel .headerwrap .x-panel-tl{
+    padding-top:6px;
+    background-image: url(images/header-top.png);
+    border:0px;
+}
+.x-left-panel .headerwrap .x-panel-bl{
+    padding-top:6px;
+    background-image: url(images/header-bottom.png);
+    background-position: bottom;
+}
+/* Fix for Webkit */
+.ext-webkit .x-left-panel .headerwrap .x-panel-bl{
+    background-position: 0% 100%;
+}
+.x-panel-collapsed .headerwrap .x-panel-tl{
+    background-image: url(images/header-top-collapsed.png);
+}
+.x-panel-collapsed .headerwrap .x-panel-bl{
+    background-image: url(images/header-bottom-collapsed.png);
+}
+.x-left-panel .headerwrap .x-panel-header-text{
+    background-image: url(images/header-middle.png);
+    margin-left:0px;
+    border:0px;
+    padding-left:4px;
+}
+.x-left-panel .headerwrap .x-panel-ml{
+    background-image: url(images/header-middle.png);
+    background-color:transparent;
+    padding-left:0px;
+}
+.x-left-panel .headerwrap .x-panel-header {
+    background-image: url(images/header-middle.png);
+    border:0px;
+}
+.x-left-panel .x-panel-mc {
+    padding:0px;
+}
+.x-left-panel .x-panel-tc {
+    padding:6px 0 0 0;
+    background-image: url(images/header-top-body.png);
+}
+.x-left-panel .x-panel-tr {
+    background-image: url(images/header-top-right-body.png);
+}
+/* Tools on the header wrap */
+.x-left-panel .headerwrap .x-tool {
+    margin-left:4px;
+}
+/* Fix for Webkit */
+.ext-webkit .x-left-panel .headerwrap .x-tool {
+    margin-left:19px;
+}
+/* Fix for ExtJS glitch i found */
+.x-panel-noborder .x-panel-header-noborder {
+    border-width:0px;
+}
+.x-left-panel .x-panel-tbar .x-toolbar {
+    border:1px solid #99BBE8;
+    border-left-color:transparent;
+    border-bottom-color:transparent;
+}
+.x-left-panel .x-panel-bbar .x-toolbar {
+    border:1px solid #99BBE8;
+    border-left-color:transparent;
+    border-top-color:transparent;
+}
+.x-left-panel .x-panel-tbar-noborder .x-toolbar {
+    border-color: transparent;
+}
+.x-left-panel .x-panel-bbar-noborder .x-toolbar {
+    border-color: transparent;
+}
