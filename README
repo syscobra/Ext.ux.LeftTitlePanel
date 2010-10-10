@@ -1,8 +1,8 @@
-ExtJS On Side Headers for panel Titles
+Ext.ux.LeftTitlePanel for panel Titles
 ======================================
 Author: Javier Rincón (syscobra) jjrincon@gmail.com
 
-In this repository i will post any changes on the override to make the titles of panels go to each side and not only on top, as currently does.
+In this repository i will post the ux for putting the title on the left for Ext.Panel class, now i have made it a PlugIn so it would be easier to use and not affect everything up with the override.
 
 This is free software released under the GPLv3 License
 

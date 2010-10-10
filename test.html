@@ -1,21 +1,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>ExtJS On Side Title Header for Panels</title>
+<title>Ext.ux.LeftTitlePanel Title Header on left for Ext.Panel Plugin</title>
 <!-- Include extjs for this test -->
 <link rel="stylesheet" type="text/css" href="../ext3/resources/css/ext-all.css" />
 <script type="text/javascript" src="../ext3/adapter/ext/ext-base.js"></script>
 <script type="text/javascript" src="../ext3/ext-all-debug.js"></script>
 
-<!-- Include the override files -->
-<link rel="stylesheet" type="text/css" href="css/ext-onside-titles.css" />
-<script type="text/javascript" src="js/ext-onside-panel-title-override.js"></script>
+<!-- Include the plugin files -->
+<link rel="stylesheet" type="text/css" href="css/LeftTitlePanel.css" />
+<script type="text/javascript" src="js/LeftTitlePanel.js"></script>
 
 <script type="text/javascript">
+    var LeftTitlePanel = {ptype:'lefttitlepanel'};
     Ext.onReady(function(){
         new Ext.Panel({
 		title               : 'Example 1 Frame with tools',
-                headerDir           : 'left',
+                plugins             : LeftTitlePanel,
 		preventBodyReset    : true,
                 closable            : true,
                 padding             : 10,
@@ -40,7 +41,7 @@
 	});
         new Ext.Panel({
 		title               : 'Example 2: Frame with toolbar',
-                headerDir           : 'left',
+                plugins             : LeftTitlePanel,
 		preventBodyReset    : true,
                 closable            : true,
                 padding             : 10,
@@ -59,7 +60,7 @@
 	});
         new Ext.Panel({
 		title               : 'Example 3 : No Frame without border',
-                headerDir           : 'left',
+                plugins             : LeftTitlePanel,
 		preventBodyReset    : true,
                 closable            : true,
                 bbar                : [
@@ -88,7 +89,7 @@
 	});
         new Ext.Panel({
 		title               : 'Example 4: No Frame with border and toolbar',
-                headerDir           : 'left',
+                plugins             : LeftTitlePanel,
 		preventBodyReset    : true,
                 closable            : true,
                 padding             : 10,
@@ -105,7 +106,7 @@
 	});
         new Ext.Panel({
 		title               : 'Example 5: No Frame with border and 2 toolbars',
-                headerDir           : 'left',
+                plugins             : LeftTitlePanel,
 		preventBodyReset    : true,
                 closable            : true,
                 tools               : [{
